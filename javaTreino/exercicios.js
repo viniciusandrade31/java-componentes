@@ -148,4 +148,38 @@ if (carrinhoVazio === false) {
 	console.log("Não é possível finalizar a compra: carrinho vazio.");
 }
 
-const status
+const statusAprov = "aprovado";
+
+switch (statusAprov) {
+	case "pedente":
+		console.log("Pagamento pendente.");
+		break;
+	case "aprovado":
+		console.log("Pagamento aprovado.");
+		break;
+	case "recusado":
+		console.log("Pagamento recusado.");
+		break;
+	default:
+		console.log("Status inválido.");
+		break;
+}
+
+const pontos = 60;
+const vidas = 1;
+
+if (pontos > 50 && vidas > 0) {
+	console.log("Próximo nível liberado!");
+} else {
+	console.log("Não pode avançar para o próximo nível.");
+}
+
+const bateria = 10;
+ 
+const statusBateria = (bateria < 20) 
+  ? "Crítica" 
+  : (bateria <= 80) 
+    ? "Moderada" 
+    : "Cheia";
+ 
+console.log(statusBateria);
